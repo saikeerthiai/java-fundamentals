@@ -22,7 +22,7 @@ public class Primitives {
         double annual = 133333334.3793;
         char grade = 'A';
         char grade1 = 97;
-       
+
 
     }
 }
