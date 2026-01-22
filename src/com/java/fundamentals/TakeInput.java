@@ -5,21 +5,19 @@ import java.util.Scanner;
 public class TakeInput {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        byte footwearSize, jewelleryLengthSize, clothingSize,quantity,exchange;
+        byte footwearSize, jewelleryLengthSize, clothSize,quantity,exchangeDate;
         System.out.println("Enter footwearSize: ");
         footwearSize = sc.nextByte();
         System.out.println("Enter jewelleryLengthSize: ");
-       // System.out.println("jewelleryLengthSize:");
+        System.out.println("jewelleryLengthSize:");
         jewelleryLengthSize = sc.nextByte();
-        System.out.println("Enter clothingSize: ");
-        clothingSize = sc.nextByte();
+        System.out.println("Enter clothSize: ");
+        clothSize = sc.nextByte();
         System.out.println("Enter quantity: ");
         quantity = sc.nextByte();
-        System.out.println("Enter  exchange: ");
-        exchange = sc.nextByte();
+        System.out.println("Enter  exchangeDate: ");
+        exchangeDate = sc.nextByte();
         short  atmPin, washRange, expiryYear, manufacturingYear;
-        //System.out.println("Enter pinCode: ");
-       // pinCode = sc.nextShort();
         System.out.println("Enter atmPin: ");
         atmPin = sc.nextShort();
         System.out.println("Enter washRange: ");
@@ -69,7 +67,12 @@ public class TakeInput {
         System.out.println("Enter youSaved : ");
         youSaved = sc.nextDouble();
         System.out.println("\n--- Ajio WebSite ---");
-       // System.out.println("footwearSize: " + footwearSize);
+        System.out.println("footwearSize: " + footwearSize);
+        System.out.println("jewelleryLengthSize: " + jewelleryLengthSize);
+        System.out.println("clothSize: " + clothSize);
+        System.out.println("quantity: " + quantity);
+        System.out.println("exchangeDate: " + exchangeDate);
+        System.out.println("atmPin: " + atmPin);
 
 
 
