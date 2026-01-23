@@ -24,12 +24,8 @@ public class studentScore {
         float average;
         average = totalMarks/6;
         System.out.println("average: "+average);
-
-
-
         sc.close();
     }
-
 
 
 }
