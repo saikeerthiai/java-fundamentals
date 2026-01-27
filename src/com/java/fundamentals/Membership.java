@@ -1,6 +1,6 @@
 package com.java.fundamentals;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class Membership {
@@ -18,44 +18,35 @@ public class Membership {
         final float State_Tax =2.5F;
         float FinalTax = Central_Tax + State_Tax;
         System.out.println("Final Tax: "+FinalTax);
-
+        int discount_Percentage;
+        int shippingCharge;
 
 
         if (membership == 'S' || membership == 's') {
-            int discount_Percentage = 10;
-            int shippingCharge = 50;
-            double discount_Amount = productPrice * (discount_Percentage / 100.0);
-            System.out.println("discount_Amount: "+discount_Amount);
-            double discount = productPrice - discount_Amount;
-            System.out.println("discount: "+discount);
-            double SliverTotal_Price = discount  +FinalTax + shippingCharge;
-            System.out.println("Total Sliver price: "+SliverTotal_Price);
+            discount_Percentage = 10;
+            shippingCharge = 50;
 
         } else if (membership == 'G' || membership == 'g') {
-            int discount_Percentage = 15;
-            int shippingCharge = 20;
-            double discount_Amount = productPrice * (discount_Percentage / 100.0);
-            System.out.println("discount_Amount: "+discount_Amount);
-            double discount = productPrice - discount_Amount;
-            System.out.println("discount: "+discount);
-            double GoldTotal_Price = discount  +FinalTax + shippingCharge;
-            System.out.println("Total Sliver price: "+GoldTotal_Price);
+            discount_Percentage = 15;
+            shippingCharge = 20;
 
 
 
         } else if (membership == 'D' || membership == 'd') {
-             int discount_Percentage = 20;
-            int shippingCharge = 20;
-            double discount_Amount = productPrice * (discount_Percentage / 100.0);
-            System.out.println("discount_Amount: "+discount_Amount);
-            double discount = productPrice - discount_Amount;
-            System.out.println("discount: "+discount);
-            double DiamondTotal_Price = discount  +FinalTax + shippingCharge;
-            System.out.println("Total Sliver price: "+DiamondTotal_Price);
+             discount_Percentage = 20;
+            shippingCharge = 20;
 
         } else {
-            System.out.println("--No Option--");
+            discount_Percentage = 0;
+            shippingCharge = 100;
         }
+        double discount_Amount = productPrice * (discount_Percentage / 100.0);
+        System.out.println("discount_Amount: "+discount_Amount);
+        double priceAfterDiscount = productPrice - discount_Amount;
+        System.out.println("priceAfterDiscount: "+priceAfterDiscount);
+        double SliverTotal_Price = priceAfterDiscount  +FinalTax + shippingCharge;
+        System.out.println("Total Sliver price: "+SliverTotal_Price);
+
 
         sc.close();
     }
